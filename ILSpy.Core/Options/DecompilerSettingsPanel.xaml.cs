@@ -34,7 +34,7 @@ namespace ICSharpCode.ILSpy.Options
     /// Interaction logic for DecompilerSettingsPanel.xaml
     /// </summary>
     [ExportOptionPage(Title = nameof(Properties.Resources.Decompiler), Order = 10)]
-    internal partial class DecompilerSettingsPanel : UserControl, IOptionPage
+    public partial class DecompilerSettingsPanel : UserControl, IOptionPage
     {
 		public DecompilerSettingsPanel()
 		{

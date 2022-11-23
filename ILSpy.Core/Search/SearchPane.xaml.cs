@@ -163,13 +163,13 @@ namespace ICSharpCode.ILSpy.Search
             updateResultTimer.Stop();
         }
 		
-		void ListBox_MouseDoubleClick(object sender, RoutedEventArgs e)
+		public void ListBox_MouseDoubleClick(object sender, RoutedEventArgs e)
 		{
 			JumpToSelectedItem();
 			e.Handled = true;
 		}
 		
-		void ListBox_KeyDown(object sender, KeyEventArgs e)
+		public void ListBox_KeyDown(object sender, KeyEventArgs e)
 		{
 			if (e.Key == Key.Return) {
 				e.Handled = true;

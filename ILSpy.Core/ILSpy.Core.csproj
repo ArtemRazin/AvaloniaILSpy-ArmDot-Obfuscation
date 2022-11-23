@@ -67,5 +67,22 @@
     <ProjectReference Include="..\SharpTreeView\SharpTreeView.csproj" />
     <ProjectReference Include="..\ICSharpCode.Decompiler.PdbProvider.Cecil\ICSharpCode.Decompiler.PdbProvider.Cecil.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ArmDot.Client" Version="2022.15" />
+    <PackageReference Include="ArmDot.Engine.MSBuildTasks" Version="2022.15" />
+  </ItemGroup>
+
+<Target Name="Protect" AfterTargets="AfterCompile" BeforeTargets="BeforePublish">
+  <ItemGroup>
+     <Assemblies Include="$(ProjectDir)$(IntermediateOutputPath)$(TargetFileName)" />
+  </ItemGroup>
+  <ArmDot.Engine.MSBuildTasks.ObfuscateTask
+    Inputs="@(Assemblies)"
+    ReferencePaths="@(_ResolveAssemblyReferenceResolvedFiles->'%(RootDir)%(Directory)')"
+    MapFile="ArmDot-map.xml"
+    SkipAlreadyObfuscatedAssemblies="true"
+  />
+</Target>
   
 </Project>

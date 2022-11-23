@@ -162,7 +162,7 @@ namespace ICSharpCode.ILSpy.Options
 				currentDisplaySettings.CopyValues(s);
 		}
 
-        private void TextBox_PreviewTextInput(object sender, TextInputEventArgs e)
+        public void TextBox_PreviewTextInput(object sender, TextInputEventArgs e)
         {
             if (!e.Text.All(char.IsDigit))
                 e.Handled = true;

@@ -33,6 +33,9 @@ using Avalonia.Markup.Xaml;
 using Avalonia.Controls;
 using AvaloniaEdit.Rendering;
 
+[assembly:ArmDot.Client.ObfuscateNames()]
+[assembly:ArmDot.Client.ObfuscateNamespaces(Enable=false)]
+
 namespace ICSharpCode.ILSpy
 {
 	/// <summary>

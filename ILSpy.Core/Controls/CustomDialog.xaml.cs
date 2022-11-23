@@ -77,7 +77,7 @@ namespace ICSharpCode.ILSpy.Controls
 			}
 		}
 
-		void ButtonClick(object sender, RoutedEventArgs e)
+		public void ButtonClick(object sender, RoutedEventArgs e)
 		{
             Button button = sender as Button;
             int index = buttons.ItemContainerGenerator.IndexFromContainer(button.Parent);

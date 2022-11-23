@@ -47,7 +47,7 @@ namespace ICSharpCode.ILSpy
 			okButton.IsEnabled = !string.IsNullOrWhiteSpace(ListName.Text);
 		}
 
-		private void OKButton_Click(object sender, RoutedEventArgs e)
+		public void OKButton_Click(object sender, RoutedEventArgs e)
 		{
 			if (!string.IsNullOrWhiteSpace(ListName.Text))
 			{
@@ -55,7 +55,7 @@ namespace ICSharpCode.ILSpy
 			}
 		}
 
-		void CancelButton_Click(object sender, RoutedEventArgs e)
+		public void CancelButton_Click(object sender, RoutedEventArgs e)
 		{
 			Close(false);
 		}
