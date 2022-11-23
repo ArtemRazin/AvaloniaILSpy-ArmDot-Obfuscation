@@ -35,6 +35,7 @@ using AvaloniaEdit.Rendering;
 
 [assembly:ArmDot.Client.ObfuscateNames()]
 [assembly:ArmDot.Client.ObfuscateNamespaces(Enable=false)]
+[assembly:ArmDot.Client.ObfuscateControlFlow]
 
 namespace ICSharpCode.ILSpy
 {
@@ -63,6 +64,7 @@ namespace ICSharpCode.ILSpy
 			public string PluginName;
 		}
 
+                [ArmDot.Client.ObfuscateControlFlow(Enable=false)]
 		public override void Initialize()
 		{
 			AvaloniaXamlLoader.Load(this);

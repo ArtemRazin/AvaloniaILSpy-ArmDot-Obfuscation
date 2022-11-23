@@ -142,6 +142,7 @@ namespace ICSharpCode.ILSpy
 			ContextMenuProvider.Add(treeView, decompilerTextView);
 
 		}
+                [ArmDot.Client.ObfuscateControlFlow(Enable=false)]
 		private void InitializeComponent()
 		{
 			AvaloniaXamlLoader.Load(this);

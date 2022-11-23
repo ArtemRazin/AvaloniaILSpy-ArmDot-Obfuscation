@@ -45,6 +45,7 @@ namespace ICSharpCode.ILSpy.Controls
             resourceListView.Items = resources;
         }
 
+                [ArmDot.Client.ObfuscateControlFlow(Enable=false)]
 		private void InitializeComponent()
 		{
 			AvaloniaXamlLoader.Load(this);

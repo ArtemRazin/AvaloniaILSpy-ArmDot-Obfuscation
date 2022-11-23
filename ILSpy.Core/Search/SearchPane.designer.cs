@@ -32,6 +32,7 @@ namespace ICSharpCode.ILSpy.Search
         internal DataGrid listBox;
         internal ProgressBar searchProgressBar;
 
+                [ArmDot.Client.ObfuscateControlFlow(Enable=false)]
         private void InitializeComponent()
         {
             AvaloniaXamlLoader.Load(this);

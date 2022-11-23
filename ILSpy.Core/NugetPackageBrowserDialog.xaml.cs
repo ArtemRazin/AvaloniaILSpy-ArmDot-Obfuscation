@@ -65,6 +65,7 @@ namespace ICSharpCode.ILSpy
 			DataContext = this;
 		}
 
+                [ArmDot.Client.ObfuscateControlFlow(Enable=false)]
 		private void InitializeComponent()
 		{
 			AvaloniaXamlLoader.Load(this);
